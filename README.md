@@ -30,7 +30,7 @@ Use it as **additional guidance** to set up the Voice Channel efficiently and av
 ## Table of Contents
 
 - [Common Pitfalls When Setting Up a Dynamics 365 Contact Center (Voice) Demo](#common-pitfalls-when-setting-up-a-dynamics-365-contact-center-voice-demo)
-- [1. Partner Sandbox Licenses (Placeholder)](#1-partner-sandbox-licenses-placeholder)
+- [1. Partner Sandbox Licenses)](#1-partner-sandbox-licenses)
 - [2. After Receiving the Sandbox Licenses](#2-after-receiving-the-sandbox-licenses)
 - [3. Create Security Groups](#3-create-security-groups)
 - [4. Create the Environment in Power Platform Admin Center](#4-create-the-environment-in-power-platform-admin-center)
@@ -170,7 +170,7 @@ Before you start, check this list to avoid losing time going in the wrong direct
 
 ---
 
-## 1. Partner Sandbox Licenses (Placeholder)
+## 1. Partner Sandbox Licenses
 
 ## 1. Get Partner Sandbox Licenses
 
