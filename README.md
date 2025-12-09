@@ -49,12 +49,13 @@ Use it as **additional guidance** to set up the Voice Channel efficiently and av
 - [17. Create Event Grid System Topic for ACS](#17-create-event-grid-system-topic-for-acs)
 - [18. Create Event Subscriptions (Link ACS → Dynamics 365 Webhooks)](#18-create-event-subscriptions-link-acs--dynamics-365-webhooks)
 - [19. Validate Event Grid Configuration](#19-validate-event-grid-configuration)
-- [20. Configure the First Voice Channel](#20-configure-the-first-voice-channel)
-- [21. Create and Configure a Workstream](#21-create-and-configure-a-workstream)
-- [22. Assign Phone Numbers to the Channel / Workstream](#22-assign-phone-numbers-to-the-channel--workstream)
-- [23. Configure Languages](#23-configure-languages)
-- [24. Configure Behaviors](#24-configure-behaviors-announcements-hours-recording-automated-messages)
-- [25. Finalize Workstream Creation](#25-finalize-workstream-creation)
+- [20. Acquiring Numbers through Microsoft](#20-acquiring-numbers-through-microsoft)
+- [21. Configure the First Voice Channel](#21-configure-the-first-voice-channel)
+- [22. Create and Configure a Workstream](#22-create-and-configure-a-workstream)
+- [23. Assign Phone Numbers to the Channel / Workstream](#23-assign-phone-numbers-to-the-channel--workstream)
+- [24. Configure Languages](#24-configure-languages)
+- [25. Configure Behaviors](#25-configure-behaviors-announcements-hours-recording-automated-messages)
+- [26. Finalize Workstream Creation](#26-finalize-workstream-creation)
 
 ---
 
@@ -544,35 +545,105 @@ Under **Additional Features → Microsoft Entra Authentication**:
 
 ---
 
-## 20. Configure the First Voice Channel
+## 20. Acquiring Numbers through Microsoft (ACS)
+
+> This section applies **after** ACS is set up and successfully connected with Dynamics 365 (see sections 11–15).
+
+### 20.1 Summary – What & Why
+
+Instead of using an external carrier, you can buy phone numbers **directly from Microsoft** via **Azure Communication Services (ACS)**:
+
+*   Very convenient for **partner demos** and PoCs.
+*   Enables a clean **“all Microsoft”** telephony architecture.
+*   Numbers are managed centrally in Azure and surfaced into Dynamics 365 through ACS.
+
+---
+
+### 20.2 Steps – Buy a Number in ACS via Dynamics
+
+In the **Copilot Service Admin Center**:
+
+1.  Go to **Channels → Phone Numbers → Manage → Advanced**.
+2.  Confirm that **ACS is Connected** (status should show your ACS resource).
+3.  Click **Add ACS number**.
+4.  Select the **Country/Region** for your number:
+    *   For example, **Denmark** for `+45`, or **Sweden** for `+46`.
+5.  Choose the **Number type**:
+    *   Typically, **Geographic / Local** for most demo scenarios.
+6.  Select the **Capabilities**:
+    *   **Make calls** and **Receive calls**.
+7.  Pick a number you like from the available list, for example: `+45 89 87 65 43`.
+8.  Confirm and **purchase** the number.
+    *   Pricing is usually around **1 USD/month per number** (check your subscription and region for exact pricing).
+
+---
+
+### 20.3 Regulatory Checks
+
+For some countries/regions (including many **EU member states**), additional **regulatory requirements** apply:
+
+*   **Proof of address** or **business registration** in the country/region.
+*   Documentation for **local presence** (e.g., utility bill, company registration).
+
+If **local stock is not available**, or if regulatory checks block self-service purchase:
+
+*   You may need to open a **support ticket** and request a **special number order**, as described in the **ACS phone number documentation** on Microsoft Learn.
+
+---
+
+### 20.4 Sync Numbers into Dynamics
+
+After purchasing the number in ACS:
+
+1.  Stay in **Copilot Service Admin Center → Channels → Phone Numbers → Manage → Advanced**.
+2.  Click **Sync from Azure**.
+3.  Newly purchased numbers will appear in the list with properties such as:
+    *   **Carrier:** `Microsoft`
+    *   **Telephony:** `ACS`
+    *   **Country/Region:** e.g., `Denmark`
+
+These numbers are now available to be **assigned to Voice channels / Workstreams** (see section 22).
+
+---
+
+### 20.5 Important Notes
+
+*   Numbers are **bound to the specific ACS resource** you used when purchasing them.
+*   Because your Dynamics 365 environment is connected to a particular ACS resource:
+    *   You **cannot simply move** these numbers to a different ACS resource or reuse them in another environment without reconfiguring telephony and, if necessary, reordering numbers.
+
+
+---
+
+## 21. Configure the First Voice Channel
 
 1.  Go to **Channels → Add new channel**.
 2.  Choose **Voice**.
 
 ---
 
-## 21. Create and Configure a Workstream
+## 22. Create and Configure a Workstream
 
 The **Workstream** controls routing, queues, and distribution.
 
-### 21.1 Workstream Basics
+### 22.1 Workstream Basics
 *   **Name:** e.g., `voice-en`
 *   **Distribution Mode:** **PUSH** (Voice always uses Push).
 
-### 21.2 Fallback Queue
+### 22.2 Fallback Queue
 *   Use the automatically generated queue or create your own.
 *   *Requirement:* Ensure agents are **assigned to the queue** used.
 
 ---
 
-## 22. Assign Phone Numbers to the Channel / Workstream
+## 23. Assign Phone Numbers to the Channel / Workstream
 
 Select the **phone number** to assign to this channel.
 *   *Note: A single Workstream can manage multiple phone numbers.*
 
 ---
 
-## 23. Configure Languages
+## 24. Configure Languages
 
 *   Choose the **primary language** (e.g., English).
 *   Select a **Voice Profile** (TTS voice).
@@ -580,13 +651,13 @@ Select the **phone number** to assign to this channel.
 
 ---
 
-## 24. Configure Behaviors (Announcements, Hours, Recording, Automated Messages)
+## 25. Configure Behaviors (Announcements, Hours, Recording, Automated Messages)
 
 Configure hold music, greetings, and recording settings. These can be adjusted later.
 
 ---
 
-## 25. Finalize Workstream Creation
+## 26. Finalize Workstream Creation
 
 After completing all steps, the Voice Channel is linked, and the phone number is active.
 
