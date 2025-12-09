@@ -172,10 +172,53 @@ Before you start, check this list to avoid losing time going in the wrong direct
 
 ## 1. Partner Sandbox Licenses (Placeholder)
 
-> [!NOTE]
-> This chapter is reserved for a detailed description of how partners obtain and manage **sandbox licenses** (promo codes) for Dynamics 365 Customer Service / Contact Center.
->
-> For now, this guide assumes you **already have sandbox licenses available in your tenant** and continues with the steps **after** licenses are received.
+## 1. Get Partner Sandbox Licenses
+
+### 1.1 Summary – What & Why
+
+As a Microsoft partner or consultant, you should always use **partner sandbox licenses** for Dynamics 365 when learning, building demos, or testing voice scenarios.
+
+These licenses:
+
+* Give you **non-production** access to Dynamics 365 apps in **your own tenant** or a **custom tenant**.
+* Let you build and refine **voice channel** scenarios end-to-end without touching a customer’s environment.
+* Are provided at **low or no cost** to qualifying Business Applications partners.
+
+Environment creation comes later – this chapter is only about **getting the licenses** you will need.
+
+---
+
+### 1.2 Steps to Request Sandbox Licenses
+
+1. **Verify partner eligibility and access**
+
+   * Make sure your organization is enrolled as a **Microsoft Business Applications partner**.
+   * Access to sandbox licensing is managed via the **partner network administrator** in your company.
+   * Ask them to confirm you have access to the **Sandbox Licensing** page:
+     [https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses](https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses)
+
+2. **Review available sandbox SKUs**
+
+   On the sandbox licensing page, look for these Dynamics 365 partner sandbox offers:
+
+   * **Dynamics36 Sales,Field Service,and Customer Service PartnerSandbox 25 users**
+
+     * If available, choose the **free** variant.
+     * Includes: Sales, Field Service, Customer Service – ideal if you plan to use **Dynamics 365 Customer Service** for voice.
+   * **Dynamics 365 Contact Center Partner Sandbox**, this one is user based order at least two in order to demo agent & supervisor scenarios. 
+
+     * Use this if you specifically want to build and demo **Dynamics 365 Contact Center** scenarios.
+
+3. **Request licenses**
+
+   * Go to the license request portal:
+     [https://experience.dynamics.com/requestlicense/](https://experience.dynamics.com/requestlicense/)
+   
+
+### 1.3 **Docs**
+
+  * [Partner sandbox licenses](https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses)
+  * [Request licenses](https://experience.dynamics.com/requestlicense/)
 
 ---
 
