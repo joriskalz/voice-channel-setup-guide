@@ -196,7 +196,7 @@ Environment creation comes later – this chapter is only about **getting the li
    * Make sure your organization is enrolled as a **Microsoft Business Applications partner**.
    * Access to sandbox licensing is managed via the **partner network administrator** in your company.
    * Ask them to confirm you have access to the **Sandbox Licensing** page:
-     [https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses](https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses)
+     [https://experience.dynamics.com/requestlicense/](https://experience.dynamics.com/requestlicense/)
 
 2. **Review available sandbox SKUs**
 
@@ -218,7 +218,7 @@ Environment creation comes later – this chapter is only about **getting the li
 
 ### 1.3 **Docs**
 
-  * [Partner sandbox licenses](https://dynamicspartners.transform.microsoft.com/benefits-skilling/sandbox-licenses)
+  * [Partner sandbox licenses](https://experience.dynamics.com/requestlicense/)
   * [Request licenses](https://experience.dynamics.com/requestlicense/)
 
 ---
