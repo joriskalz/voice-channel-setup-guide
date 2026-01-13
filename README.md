@@ -21,7 +21,7 @@ Use it as **additional guidance** to set up the Voice Channel efficiently and av
 *   [Microsoft Dynamics 365 Customer Service Documentation](https://learn.microsoft.com/en-us/dynamics365/customer-service/)
 
 **Additional Resources:**
-*   🎥 ** Awesome Video Training:** [Microsoft Dynamics 365 Contact Center Video Training](https://powerpete.com/microsoft-dynamics-365-contact-center-video-training/) by MVP Peter Ruiter (aka Power Pete).
+*   🎥 **Awesome Video Training:** [Microsoft Dynamics 365 Contact Center Video Training](https://powerpete.com/microsoft-dynamics-365-contact-center-video-training/) by MVP Peter Ruiter (aka Power Pete).
 *   📊 **Visual Diagram:** [PSTN Voice Flow Diagram](https://voice-flow.demo-monkey.net/) to understand options for connecting the PSTN voice channel. Hover over the items for more details and explanations.
 *   📂 **Latest Version:** Available at [GitHub](https://github.com/joriskalz/voice-channel-setup-guide).
 
